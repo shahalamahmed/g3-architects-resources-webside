@@ -1,38 +1,43 @@
 /* work sans */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
-.text-light-gray{
+
+.text-light-gray {
   color: #727272;
 }
+
 .section-title {
   font-size: 2.8rem;
   font-weight: 700;
   color: #131313;
 
-} 
+}
 
 * {
   font-family: 'Work Sans', sans-serif;
 }
-header{
-  background: rgba(255, 144, 14, 0.10);;
+
+header {
+  background: rgba(255, 144, 14, 0.10);
+  ;
   padding: 50px 240px;
 }
-nav{
+
+nav {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
 
-.btn-primary{
+.btn-primary {
   border-radius: 8px;
   color: #FFF;
   background: #ff900e;
   padding: 20px 25px;
   cursor: pointer;
   border: 0;
-} 
+}
 
- nav ul {
+nav ul {
   display: flex;
 }
 
@@ -46,74 +51,129 @@ nav li {
 nav li a {
   text-decoration: none;
   color: #424242;
-} 
+}
+
 .banner-content {
   max-width: 800px;
   text-align: center;
   margin: 0 auto;
 }
+
 .banner-title {
   font-style: 4rem;
   font-weight: 700;
   color: #131313;
 }
-.banner img{
+
+.banner img {
   width: 100%;
 }
 
 /* main style */
-main{
+main {
   max-width: 1440px;
   margin: 70px auto;
 }
-.teams-container{
+
+.teams-container {
   display: flex;
   align-items: center;
 }
-.teams-img-container{
+
+.teams-img-container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
-.teams-content{
-  padding-left: 70px ;
+
+.teams-content {
+  padding-left: 70px;
   padding-right: 70px;
 }
-.teams-title{
+
+.teams-title {
   font-size: 2.8rem;
 }
-.teams-title .quick-lsit{
+
+.teams-title .quick-lsit {
   color: #727272;
   font-weight: 500;
 }
-.teams-title .text-features{
+
+.teams-title .text-features {
   color: #FF900E;
   font-weight: 700;
 }
-.facts-card-container{
+
+/* features style */
+.features {
+  display: flex;
+  margin-top: 130px;
+  gap: 100px;
+}
+.features .section-title{
+  border-left: 5px solid #FF900E;
+  padding-left: 20px;
+}
+.feature-img img{
+  height: 90%;
+  margin: 90px;
+}
+.feature-content .card {
+  padding: 30px;
+  margin-bottom: 20px ;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.ten-years-badge{
+  border-radius: 8px;
+  background: #FF900E;
+  color: #FFF;
+  width: 342px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+
+}
+.ten-years-badge h2{
+  font-size: 4rem;
+  margin: 0;
+}
+.ten-years-badge p{
+  font-size: 1.5rem;
+}
+
+.facts-card-container {
   display: flex;
   justify-content: space-around;
 }
-.facts-card-container .card{
+
+.facts-card-container .card {
   border-radius: 8px;
   border: 1px solid #FF900E;
   align-items: center;
   padding: 30px;
 
 }
-.facts-card-container .card-title{
+
+.facts-card-container .card-title {
   font-weight: 600;
 }
-.facts-card-container .card-stats{
+
+.facts-card-container .card-stats {
   font-size: 2.8rem;
   color: #424242;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.sponsors{
+
+.sponsors {
   text-align: center;
 }
-.sponsors-img-container{
+
+.sponsors-img-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -121,45 +181,58 @@ main{
   align-items: center;
 
 }
-.sponsors-img-container img{
+
+.sponsors-img-container img {
   width: 165px;
 }
 
 
 
-/* responsive style */  
+/* responsive style */
 @media screen and (max-width:576px) {
-  header{
-   padding: 20px;
-  }
-  nav,
-  .teams-container,
-  .facts-card-container,
-  .sponsors-img-container
-  {
-   flex-direction: column;
-  }
-  .teams-img-container{
-    grid-template-columns: 1fr;
-  }
-  .teams-content{
-    padding-left: 20px ;
-    padding-right: 20px;
-  }
-  .facts-card-container{
-    gap: 20px;
+  header {
+    padding: 20px;
   }
 
+  nav,
+  .teams-container,
+  .features,
+  .facts-card-container,
+  .sponsors-img-container {
+    flex-direction: column;
+  }
+
+  .teams-img-container {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .facts-card-container {
+    gap: 20px;
+  }
+  .ten-years-badge{
+    position: static;
+    max-width: 300px;
+  }
 }
+
 /* medium */
 @media screen and (min-width:576px)and(max-width:992px) {
- header{
-   padding: 50px;
- }
- nav, 
- .teams-container,
- .sponsors-img-container
- {
-   flex-direction: column;
- }
+  header {
+    padding: 50px;
+  }
+  .feature-img img{
+    width: 100%;
+    margin-left: 0;
+  }
+  nav,
+  .features,
+  .teams-container,
+  .sponsors-img-container {
+    flex-direction: column;
+  }
 }
